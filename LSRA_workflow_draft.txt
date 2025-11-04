@@ -366,3 +366,41 @@ I like the work flow, here's how I want it to be like:
 5. the final dataset with just the labels -> final csv 
 
 how's this workflow, judge it and lets begin on the code part step by step
+
+
+
+
+so after lyrics fetching and all that I did so many things
+
+
+
+lets's beginI fetched around 45k songs 
+retried the skipped songs
+failed songs were saved separately
+within the fianl dataset of fetched songs the  anger and fear class songs well less so, I treid to re fetch just them 
+for that I used genius API which fetched around 1k songs additional
+
+now that the dataset was ready 
+the calss imbalance was still high, with almost 6k difference b/w the top and the bottom classes
+
+yet I cleaned the dataset 
+
+the cleaned dataset was again passed through the language detection pipeline 
+this was done to eliminate the non-english songs from our database
+now that the final clean and just english database wa in our had 
+I got started with the ML pipelinebasically with SVM model
+in simple terms it is like trying to fit a line hat keep things apart from one another
+
+
+now the training began but there we issues, a lot of them actually
+
+the first and major issue I faced was  regarding the accuracy
+
+it was so low like  19% are you kidding, so I tweaked a bit, tried to keep the classes balanced 
+but guess what, the accuracy dropped to freaking 17 %
+
+
+then I wen ton the serach songs to balance the dataset 
+
+found some, clean it and merged with what I had
+ and retrained, the accuracy is now at 27% another joke but that's it 
